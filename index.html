@@ -1,206 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Studenet Grading System || Using JavaScript</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="background-overlay">
-        <div class="mark-sheet">
-            <div class="container">
-               <br>
-                <h1 class="text-center">SSC Result Board</h1>
-                <hr>
-                <br>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>Student Name:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="studnetName">
-                    </div>
-                    <div class="col-md-3">
-                        <label>Roll Number:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="rollNumber">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>Board:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="board">
-                    </div>
-                    <div class="col-md-3">
-                        <label>Registration Number:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="regNumber">
-                    </div>
-                </div>
-                <br>
-                <h4 class="text-center">Enter Subject Marks</h4>
-                <hr>
-                <br>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>Bangla First Paper:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="bfpaper">
-                    </div>
-                    <div class="col-md-3">
-                        <label>Bangla 2nd Paper:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="blpaper">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>English First Paper:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="efpaper">
-                    </div>
-                    <div class="col-md-3">
-                        <label>English 2nd Paper:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="elpaper">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>ICT:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="ict">
-                    </div>
-                    <div class="col-md-3">
-                        <label>Islam:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="islam">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>Math:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="math">
-                    </div>
-                    <div class="col-md-3">
-                        <label>Physic:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="physic">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>chemistry:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="chemistry">
-                    </div>
-                    <div class="col-md-3">
-                        <label>Biology:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="biology">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>Heigher Math:</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="heigher">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <button type="button" id="result">Result</button>
-                    </div>
-                </div>
-            </div>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="background-overlay"></div>
+    <div class="mark-sheet">
+      <div class="container">
+        <br />
+        <h1 class="text-center">SSC Result Board</h1>
+        <hr />
+        <br />
+        <div class="row">
+          <div class="col-md-3">
+            <label>Student Name:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="studnetName" />
+          </div>
+          <div class="col-md-3">
+            <label>Roll Number:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="rollNumber" />
+          </div>
         </div>
+        <div class="row">
+          <div class="col-md-3">
+            <label>Board:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="board" />
+          </div>
+          <div class="col-md-3">
+            <label>Registration Number:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="regNumber" />
+          </div>
+        </div>
+        <br />
+        <h4 class="text-center">Enter Subject Marks</h4>
+        <hr />
+        <br />
+        <div class="row">
+          <div class="col-md-3">
+            <label>Bangla First Paper:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="bfpaper" />
+          </div>
+          <div class="col-md-3">
+            <label>Bangla 2nd Paper:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="blpaper" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <label>English First Paper:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="efpaper" />
+          </div>
+          <div class="col-md-3">
+            <label>English 2nd Paper:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="elpaper" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <label>ICT:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="ict" />
+          </div>
+          <div class="col-md-3">
+            <label>Islam:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="islam" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <label>Math:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="math" />
+          </div>
+          <div class="col-md-3">
+            <label>Physic:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="physic" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <label>chemistry:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="chemistry" />
+          </div>
+          <div class="col-md-3">
+            <label>Biology:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="biology" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <label>Heigher Math:</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" id="heigher" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button type="button" id="result" onclick="result();">
+              Result
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div id="popup">
-        <h4 class="text-center">Student Information</h4>
-        <p id="nam"></p>
-        <p id="brd"></p>
-        <p id="stu_roll"></p>
-        <p id="stu_reg"></p>
-        <h4>SSC Result</h4>
-        <p id="ban1st"></p>
-        <p id="ban2nd"></p>
-        <p id="en1st"></p>
-        <p id="en2nd"></p>
-        <p id="ict"></p>
-        <p id="islam"></p>
-        <p id="math"></p>
-        <p id="phy"></p>
-        <p id="che"></p>
-        <p id="bio"></p>
-        <p id="hm"></p>
+      <h4 class="text-center">Student Information</h4>
+      <p id="nam"></p>
+      <p id="brd"></p>
+      <p id="stu_roll"></p>
+      <p id="stu_reg"></p>
+      <h4>SSC Result</h4>
+      <p id="ban1st"></p>
+      <p id="ban2nd"></p>
+      <p id="en1st"></p>
+      <p id="en2nd"></p>
+      <p id="ict"></p>
+      <p id="islam"></p>
+      <p id="math"></p>
+      <p id="phy"></p>
+      <p id="che"></p>
+      <p id="bio"></p>
+      <p id="hm"></p>
     </div>
-    
-    <script>
-        var stuName=document.getElementById('studnetName').value;
-        var rollNum=document.getElementById('rollNumber').value;
-        var stuName=document.getElementById('board').value;
-        var regNum=document.getElementById('regNumber').value;
-        
-        //result
-        var regNum=document.getElementById('bfpaper').value;
-        var regNum=document.getElementById('blpaper').value;
-        var regNum=document.getElementById('efpaper').value;
-        var regNum=document.getElementById('elpaper').value;
-        var regNum=document.getElementById('ict').value;
-        var regNum=document.getElementById('islam').value;
-        var regNum=document.getElementById('math').value;
-        var regNum=document.getElementById('physic').value;
-        var regNum=document.getElementById('chemistry').value;
-        var regNum=document.getElementById('biology').value;
-        var regNum=document.getElementById('heigher').value;
-        
-        //popup
-        var popup=document.getElementById("popup");
-        popup.style.display='block';
-        
-    </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</body>
+
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
