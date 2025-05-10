@@ -2,161 +2,147 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Studenet Grading System || Using JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Grading System</title>
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="background-overlay"></div>
     <div class="mark-sheet">
       <div class="container">
-        <br />
-        <h1 class="text-center">SSC Result Board</h1>
-        <hr />
-        <br />
-        <div class="row">
-          <div class="col-md-3">
-            <label>Student Name:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="studnetName" value="Md. Afiqur Rahman" />
-          </div>
-          <div class="col-md-3">
-            <label>Roll Number:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="rollNumber" value="2220CSE50302" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <label>Board:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="board" value="Rajshahi" />
-          </div>
-          <div class="col-md-3">
-            <label>Registration Number:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="regNumber" value="000000000000" />
+        <h1 class="text-center mb-4">
+          <i class="fas fa-graduation-cap"></i> SSC Result Board
+        </h1>
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label><i class="fas fa-user"></i> Student Name</label>
+                <input type="text" id="studnetName" class="form-control" value="Md. Afiqur Rahman" />
+              </div>
+              <div class="col-md-6">
+                <label><i class="fas fa-id-card"></i> Roll Number</label>
+                <input type="text" id="rollNumber" class="form-control" value="2220CSE50302" />
+              </div>
+              <div class="col-md-6">
+                <label><i class="fas fa-university"></i> Board</label>
+                <input type="text" id="board" class="form-control" value="Rajshahi" />
+              </div>
+              <div class="col-md-6">
+                <label><i class="fas fa-registered"></i> Registration Number</label>
+                <input type="text" id="regNumber" class="form-control" value="000000000000" />
+              </div>
+            </div>
           </div>
         </div>
-        <br />
-        <h4 class="text-center">Enter Subject Marks</h4>
-        <hr />
-        <br />
-        <div class="row">
-          <div class="col-md-3">
-            <label>Bangla First Paper:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="bfpaper" value="55"/>
-          </div>
-          <div class="col-md-3">
-            <label>Bangla 2nd Paper:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="blpaper" value="50" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <label>English First Paper:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="efpaper" value="50" />
-          </div>
-          <div class="col-md-3">
-            <label>English 2nd Paper:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="elpaper" value="45" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <label>ICT:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="ict" value="80" />
-          </div>
-          <div class="col-md-3">
-            <label>Islam:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="islam" value="80" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <label>Math:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="math" value="70" />
-          </div>
-          <div class="col-md-3">
-            <label>Physic:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="physic" value="70" />
+
+        <h4 class="text-center mb-4">
+          <i class="fas fa-book"></i> Enter Subject Marks
+        </h4>
+        
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label>Bangla First Paper</label>
+                <input type="text" id="bfpaper" class="form-control" value="55" />
+              </div>
+              <div class="col-md-6">
+                <label>Bangla 2nd Paper</label>
+                <input type="text" id="blpaper" class="form-control" value="50" />
+              </div>
+              <div class="col-md-6">
+                <label>English First Paper</label>
+                <input type="text" id="efpaper" class="form-control" value="50" />
+              </div>
+              <div class="col-md-6">
+                <label>English 2nd Paper</label>
+                <input type="text" id="elpaper" class="form-control" value="45" />
+              </div>
+              <div class="col-md-6">
+                <label>ICT</label>
+                <input type="text" id="ict" class="form-control" value="80" />
+              </div>
+              <div class="col-md-6">
+                <label>Islam</label>
+                <input type="text" id="islam" class="form-control" value="80" />
+              </div>
+              <div class="col-md-6">
+                <label>Math</label>
+                <input type="text" id="math" class="form-control" value="70" />
+              </div>
+              <div class="col-md-6">
+                <label>Physics</label>
+                <input type="text" id="physic" class="form-control" value="70" />
+              </div>
+              <div class="col-md-6">
+                <label>Chemistry</label>
+                <input type="text" id="chemistry" class="form-control" value="70" />
+              </div>
+              <div class="col-md-6">
+                <label>Biology</label>
+                <input type="text" id="biology" class="form-control" value="70" />
+              </div>
+              <div class="col-md-6">
+                <label>Higher Math</label>
+                <input type="text" id="heigher" class="form-control" value="50" />
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-3">
-            <label>chemistry:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="chemistry" value="70" />
-          </div>
-          <div class="col-md-3">
-            <label>Biology:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="biology" value="70" />
-          </div>
+
+        <div class="text-center mt-4">
+          <button type="button" id="result" class="btn btn-primary btn-lg" onclick="result();">
+            <i class="fas fa-calculator"></i> Calculate Result
+          </button>
         </div>
-        <div class="row">
-          <div class="col-md-3">
-            <label>Heigher Math:</label>
-          </div>
-          <div class="col-md-3">
-            <input type="text" id="heigher" value="50" />
-          </div>
+      </div>
+    </div>
+
+    <!-- Background Overlay -->
+    <div id="background-overlay" class="overlay"></div>
+
+    <!-- Result Popup -->
+    <div id="popup" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="text-center mb-4">
+            <i class="fas fa-user-graduate"></i> Student Information
+          </h4>
+          <button type="button" class="close-btn" onclick="closePopup()">&times;</button>
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <button type="button" id="result" onclick="result();">
-              Result
-            </button>
+        <div class="modal-body">
+          <div class="student-info mb-4">
+            <p id="nam"></p>
+            <p id="brd"></p>
+            <p id="stu_roll"></p>
+            <p id="stu_reg"></p>
+          </div>
+          <h4 class="mb-3">
+            <i class="fas fa-chart-bar"></i> SSC Result
+          </h4>
+          <div class="result-info">
+            <p id="ban1st"></p>
+            <p id="ban2nd"></p>
+            <p id="en1st"></p>
+            <p id="en2nd"></p>
+            <p id="ict"></p>
+            <p id="islam"></p>
+            <p id="math"></p>
+            <p id="phy"></p>
+            <p id="che"></p>
+            <p id="bio"></p>
+            <p id="hm"></p>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="popup">
-      <h4 class="text-center">Student Information</h4>
-      <p id="nam"></p>
-      <p id="brd"></p>
-      <p id="stu_roll"></p>
-      <p id="stu_reg"></p>
-      <h4>SSC Result</h4>
-      <p id="ban1st"></p>
-      <p id="ban2nd"></p>
-      <p id="en1st"></p>
-      <p id="en2nd"></p>
-      <p id="ict"></p>
-      <p id="islam"></p>
-      <p id="math"></p>
-      <p id="phy"></p>
-      <p id="che"></p>
-      <p id="bio"></p>
-      <p id="hm"></p>
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
