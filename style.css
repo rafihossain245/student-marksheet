@@ -115,6 +115,7 @@ button:hover {
 .modal-header {
   position: relative;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .close-btn {
@@ -141,6 +142,7 @@ button:hover {
 #popup h4 {
   color: var(--primary-color);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 #popup p {
@@ -148,6 +150,15 @@ button:hover {
   padding: 0.5rem;
   background: #f8f9fa;
   border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.student-info p {
+  margin-bottom: 1rem;
+}
+
+.result-info p {
+  margin-bottom: 1rem;
 }
 
 /* Responsive Design */

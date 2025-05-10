@@ -11,17 +11,10 @@ function result() {
     const blpaper = parseFloat(document.getElementById("blpaper")?.value) || 0;
     const efpaper = parseFloat(document.getElementById("efpaper")?.value) || 0;
     const elpaper = parseFloat(document.getElementById("elpaper")?.value) || 0;
-    const ict = parseFloat(document.getElementById("ict")?.value) || 0;
-    const islam = parseFloat(document.getElementById("islam")?.value) || 0;
-    const math = parseFloat(document.getElementById("math")?.value) || 0;
     const physic = parseFloat(document.getElementById("physic")?.value) || 0;
     const chemistry = parseFloat(document.getElementById("chemistry")?.value) || 0;
     const biology = parseFloat(document.getElementById("biology")?.value) || 0;
     const heigher = parseFloat(document.getElementById("heigher")?.value) || 0;
-
-    // Calculate total marks and GPA
-    const totalMarks = bfpaper + blpaper + efpaper + elpaper + ict + islam + math + physic + chemistry + biology + heigher;
-    const averageMarks = totalMarks / 11;
 
     // Show popup and overlay
     const popup = document.getElementById("popup");
@@ -35,12 +28,6 @@ function result() {
     popup.style.display = "block";
     overlay.style.display = "block";
 
-    // Clear previous results
-    const resultInfo = document.querySelector('.result-info');
-    if (resultInfo) {
-      resultInfo.innerHTML = '';
-    }
-
     // Helper function to safely set innerHTML
     const setInnerHTML = (elementId, content) => {
       const element = document.getElementById(elementId);
@@ -50,37 +37,21 @@ function result() {
     };
 
     // Display student information
-    setInnerHTML("nam", `<strong>Student Name:</strong> ${stuName}`);
-    setInnerHTML("brd", `<strong>Board:</strong> ${board}`);
-    setInnerHTML("stu_roll", `<strong>Roll Number:</strong> ${rollNum}`);
-    setInnerHTML("stu_reg", `<strong>Registration Number:</strong> ${regNum}`);
+    setInnerHTML("nam", `Student Name: ${stuName}`);
+    setInnerHTML("brd", `Board: ${board}`);
+    setInnerHTML("stu_roll", `Roll Number: ${rollNum}`);
+    setInnerHTML("stu_reg", `Registration Number: ${regNum}`);
 
     // Display subject results with grades
-    setInnerHTML("ban1st", `Bangla 1st Paper: ${bfpaper} (${calculateGrade(bfpaper)})`);
-    setInnerHTML("ban2nd", `Bangla 2nd Paper: ${blpaper} (${calculateGrade(blpaper)})`);
-    setInnerHTML("en1st", `English 1st Paper: ${efpaper} (${calculateGrade(efpaper)})`);
-    setInnerHTML("en2nd", `English 2nd Paper: ${elpaper} (${calculateGrade(elpaper)})`);
-    setInnerHTML("ict", `ICT: ${ict} (${calculateGrade(ict)})`);
-    setInnerHTML("islam", `Islam: ${islam} (${calculateGrade(islam)})`);
-    setInnerHTML("math", `Math: ${math} (${calculateGrade(math)})`);
-    setInnerHTML("phy", `Physics: ${physic} (${calculateGrade(physic)})`);
-    setInnerHTML("che", `Chemistry: ${chemistry} (${calculateGrade(chemistry)})`);
-    setInnerHTML("bio", `Biology: ${biology} (${calculateGrade(biology)})`);
-    setInnerHTML("hm", `Higher Math: ${heigher} (${calculateGrade(heigher)})`);
+    setInnerHTML("ban1st", `Bangla 1st Paper: ${calculateGrade(bfpaper)}`);
+    setInnerHTML("ban2nd", `Bangla 2nd Paper: ${calculateGrade(blpaper)}`);
+    setInnerHTML("en1st", `English 1st Paper: ${calculateGrade(efpaper)}`);
+    setInnerHTML("en2nd", `English 2nd Paper: ${calculateGrade(elpaper)}`);
+    setInnerHTML("phy", `Physics: ${calculateGrade(physic)}`);
+    setInnerHTML("che", `Chemistry: ${calculateGrade(chemistry)}`);
+    setInnerHTML("bio", `Biology: ${calculateGrade(biology)}`);
+    setInnerHTML("hm", `Higher Math: ${calculateGrade(heigher)}`);
 
-    // Add total marks and GPA
-    if (resultInfo) {
-      const totalMarksElement = document.createElement('p');
-      totalMarksElement.innerHTML = `<strong>Total Marks:</strong> ${totalMarks.toFixed(2)}`;
-      const averageMarksElement = document.createElement('p');
-      averageMarksElement.innerHTML = `<strong>Average Marks:</strong> ${averageMarks.toFixed(2)}`;
-      const finalGradeElement = document.createElement('p');
-      finalGradeElement.innerHTML = `<strong>Final Grade:</strong> ${calculateGrade(averageMarks)}`;
-      
-      resultInfo.appendChild(totalMarksElement);
-      resultInfo.appendChild(averageMarksElement);
-      resultInfo.appendChild(finalGradeElement);
-    }
   } catch (error) {
     console.error("Error in result calculation:", error);
     alert("An error occurred while calculating the result. Please try again.");
@@ -93,7 +64,7 @@ function calculateGrade(marks) {
   }
   
   if (marks >= 0 && marks <= 32) {
-    return "F (Fail)";
+    return "fail";
   } else if (marks >= 33 && marks <= 39) {
     return "D";
   } else if (marks >= 40 && marks <= 49) {
